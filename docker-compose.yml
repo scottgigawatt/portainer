@@ -32,8 +32,8 @@ services:
 
     # Define the host and container ports
     ports:
-      - "8888:8000"
-      - "9443:9443"
+      - "${PORTAINER_WEB_PORT}:9443"
+      - "${PORTAINER_EDGE_PORT}:8000"
 
     # Mount host directories into the container
     volumes:

@@ -6,35 +6,11 @@ This repository contains a Docker Compose configuration tailored for Synology NA
 
 The `docker-compose.yml` file in this repository configures a Portainer container to provide an easy-to-use web interface for managing Docker containers on a Synology NAS.
 
+For more details on the Docker Compose configuration, refer to the [docker-compose.yml](docker-compose.yml) file in this repository.
+
 ## Included Tool
 
 - **Portainer**: Manages Docker containers through a user-friendly web interface. [More info](https://www.portainer.io/)
-
-## Docker Compose Configuration
-
-Ensure your Docker Compose version is compatible with version 2.9.
-
-### Services Configuration
-
-#### Portainer
-
-- **Image**: `portainer/portainer-ce:${PORTAINER_TAG}`
-- **Pull Policy**: Always
-- **Container Name**: `portainer-${PORTAINER_TAG}`
-- **Restart Policy**: Unless stopped
-- **Network Mode**: Host
-- **Hostname**: portainer
-
-#### Ports
-
-- **8010:8000**
-- **9443:9443**
-
-#### Volumes
-
-- `${HOST_DOCKER_PATH}/portainer/data:/data:rw`
-- `/var/run/docker.sock:/var/run/docker.sock`
-- `/etc/localtime:/etc/localtime:ro`
 
 ## Usage
 
@@ -53,7 +29,7 @@ Follow these steps to start the Portainer service:
 Manage Docker configuration environment variables in the `.env` file. Override these variables easily on the command line when starting the Docker Compose stack:
 
 ```bash
-PORTAINER_TAG="latest" docker-compose up -d
+PORTAINER_TAG="2.20.3" docker-compose up -d
 ```
 
 Adjust the values of these environment variables to your requirements.
