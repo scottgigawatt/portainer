@@ -1,40 +1,40 @@
-# Portainer for Synology
+# 🚢 Portainer for Synology
 
 This repository contains a Docker Compose configuration tailored for Synology NAS environments, simplifying the setup process for managing Docker containers by integrating Portainer.
 
-## Overview
+## 🌟 Overview
 
 The `docker-compose.yml` file in this repository configures a Portainer container to provide an easy-to-use web interface for managing Docker containers on a Synology NAS.
 
 For more details on the Docker Compose configuration, refer to the [docker-compose.yml](docker-compose.yml) file in this repository.
 
-## Included Tool
+## 🛠️ Included Tool
 
 - **Portainer**: Manages Docker containers through a user-friendly web interface. [More info](https://www.portainer.io/)
 
-## Usage
+## 🚀 Usage
 
-### Starting the Service
+### 🏁 Starting the Service
 
 Follow these steps to start the Portainer service:
 
-1. Clone this repository to your Synology NAS.
-2. Navigate to the directory containing the `docker-compose.yml` file.
-3. Open a terminal or SSH into your Synology NAS.
+1. Open a terminal and SSH into your Synology NAS.
+2. Clone this repository to your Synology NAS.
+3. Copy the [`example.env`](example.env) file to `.env` and update it to customize default settings.
 4. Run `docker-compose up -d` to start the container in detached mode.
 5. Access the Portainer web interface at `https://<your-nas-ip>:9443`.
 
-### Managing Docker Config Environment Variables
+### 🔧 Managing Docker Config Environment Variables
 
-Manage Docker configuration environment variables in the `.env` file. Override these variables easily on the command line when starting the Docker Compose stack:
+Manage Docker configuration environment variables in the `.env` file. The [`example.env`](example.env) file can be copied to `.env` and updated to change the behavior. Override these variables easily on the command line when starting the Docker Compose stack:
 
 ```bash
-PORTAINER_TAG="2.20.3" docker-compose up -d
+PORTAINER_TAG="2.21.0" docker-compose up -d
 ```
 
-Adjust the values of these environment variables to your requirements.
+Adjust the values of these environment variables to suit your requirements.
 
-### Secure Access to Synology Applications
+### 🔒 Secure Access to Synology Applications
 
 Use DSM 7 Reverse Proxy to configure secure access to Synology applications. Follow the guide [here](https://mariushosting.com/synology-how-to-use-reverse-proxy-on-dsm-7/) for DSM 7.
 
@@ -46,14 +46,14 @@ Use DSM 7 Reverse Proxy to configure secure access to Synology applications. Fol
 > 4. From the `Create` dropdown, select `WebSocket`.
 > 5. Save the changes to resolve the issue.
 
-## Environment Details
+## 🖥️ Environment Details
 
 Tested on Synology DS916+ running DSM 7.2.1-69057 Update 5, with Docker Compose version v2.9.0-6413-g38f6acd.
 
-## License
+## 📄 License
 
 Licensed under the Apache 2 License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Contribute or provide feedback to improve this repository. Happy container management with Portainer!
+Contribute or provide feedback to improve this repository. Happy container management with Portainer! 🎉
