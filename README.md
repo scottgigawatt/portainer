@@ -1,59 +1,90 @@
+<hr />
+
+<p align="center">
+  <em>⚓ Star this repo to chart your course to smoother container management.</em>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/license/scottgigawatt/portainer?label=Charter%20License" alt="License" />
+  <img src="https://img.shields.io/github/last-commit/scottgigawatt/portainer?label=Last%20Docking&logo=git" alt="Last Commit" />
+  <img src="https://img.shields.io/github/repo-size/scottgigawatt/portainer?label=Storage%20Crate" alt="Repo Size" />
+</p>
+
+<hr />
+
 # 🚢 Portainer for Synology
 
-This repository contains a Docker Compose configuration tailored for Synology NAS environments, simplifying the setup process for managing Docker containers by integrating Portainer.
+## ⚓ Dock Overview
 
-## 🌟 Overview
+This repository provides a streamlined Docker Compose setup for deploying Portainer on Synology NAS, giving you helm control over your Docker containers with a clean and intuitive web interface.
 
-The `docker-compose.yml` file in this repository configures a Portainer container to provide an easy-to-use web interface for managing Docker containers on a Synology NAS.
+Explore the full configuration in [`docker-compose.yml`](docker-compose.yml).
 
-For more details on the Docker Compose configuration, refer to the [docker-compose.yml](docker-compose.yml) file in this repository.
+## 🧰 Equipment Manifest
 
-## 🛠️ Included Tool
+- **Portainer**: A web UI to manage Docker containers with ease. [More info](https://www.portainer.io/)
 
-- **Portainer**: Manages Docker containers through a user-friendly web interface. [More info](https://www.portainer.io/)
+## 📦 Deployment Orders
 
-## 🚀 Usage
+### ⚙️ Launch Sequence
 
-### 🏁 Starting the Service
+1. SSH into your Synology NAS.
+2. Clone this repository.
+3. Copy the [`example.env`](example.env) file to `.env` and adjust it to your environment.
+4. Run the deployment:
 
-Follow these steps to start the Portainer service:
+   ```bash
+   docker-compose up -d
+   ```
 
-1. Open a terminal and SSH into your Synology NAS.
-2. Clone this repository to your Synology NAS.
-3. Copy the [`example.env`](example.env) file to `.env` and update it to customize default settings.
-4. Run `docker-compose up -d` to start the container in detached mode.
-5. Access the Portainer web interface at `https://<your-nas-ip>:9443`.
+5. Access Portainer at `https://<your-nas-ip>:9443`.
 
-### 🔧 Managing Docker Config Environment Variables
+### 🪝 Environmental Tuning
 
-Manage Docker configuration environment variables in the `.env` file. The [`example.env`](example.env) file can be copied to `.env` and updated to change the behavior. Override these variables easily on the command line when starting the Docker Compose stack:
+All Docker config values are managed via the `.env` file. You can override any of them on-the-fly:
 
 ```bash
-PORTAINER_TAG="2.21.0" docker-compose up -d
+PORTAINER_TAG="2.31.0" docker-compose up -d
 ```
 
-Adjust the values of these environment variables to suit your requirements.
+Tweak values to meet your deployment needs.
 
-### 🔒 Secure Access to Synology Applications
+## 🛡️ Fortifying the Harbor Gate
 
-Use DSM 7 Reverse Proxy to configure secure access to Synology applications. Follow the guide [here](https://mariushosting.com/synology-how-to-use-reverse-proxy-on-dsm-7/) for DSM 7.
+To enable secure access, use Synology DSM 7’s built-in reverse proxy. Follow this [guide](https://mariushosting.com/synology-how-to-use-reverse-proxy-on-dsm-7/).
 
-> **Note**: If you encounter "Socket closed" errors when accessing the DSM UI via reverse proxy and trying to open terminals for running containers, enable WebSocket for the reverse proxy record:
+> [!WARNING]
+> 🧱 If you see “Socket closed” errors when using a reverse proxy to access container terminals, enable WebSocket:
 >
-> 1. Go to `Control Panel -> Application Portal -> Reverse Proxy`.
-> 2. Select `Edit` for your reverse proxy record.
-> 3. Navigate to the `Custom Header` tab.
-> 4. From the `Create` dropdown, select `WebSocket`.
-> 5. Save the changes to resolve the issue.
+> 1. DSM → Control Panel → Application Portal → Reverse Proxy
+> 2. Edit your rule → go to the `Custom Header` tab
+> 3. Use `Create > WebSocket`
+> 4. Save and you're good to sail
 
-## 🖥️ Environment Details
+## 🧭 System Charting
 
-Tested on Synology DS916+ running DSM 7.2.1-69057 Update 5, with Docker Compose version v2.9.0-6413-g38f6acd.
+Tested on:
 
-## 📄 License
+- Synology DS1522+ and DS916+
+- DSM 7.2.2
+- Docker Compose v2.9
 
-Licensed under the Apache 2 License - see [LICENSE](LICENSE) for details.
+> [!NOTE]
+> 🛟 This setup should work on other platforms too—any port that runs Docker Compose can join the fleet.
+
+## 📜 Charter Agreement
+
+Licensed under the Apache 2 License. See [LICENSE](LICENSE) for full terms.
 
 ---
 
-Contribute or provide feedback to improve this repository. Happy container management with Portainer! 🎉
+```
+     __/___
+ _____/______|
+ \              \
+  ~~~~~~\~~~~~~~
+         \
+  ⚓ Portainer Harbor Control
+```
+
+Contribute or raise a flag with feedback. Steady sailing! 🌊
