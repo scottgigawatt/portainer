@@ -23,12 +23,12 @@ services:
   #
   portainer:
     # Docker image and container information
-    image: portainer/portainer-ce:${PORTAINER_TAG} # Run using the specified tag
-    pull_policy: always                            # Ensure that the image is always pulled
-    container_name: portainer-${PORTAINER_TAG}     # Append Docker image tag to container name
-    restart: unless-stopped                        # Restart the container unless explicitly stopped
-    network_mode: bridge                           # Use the host network
-    hostname: portainer                            # Set the container hostname
+    image: portainer/portainer-ce:${PORTAINER_TAG}  # Run using the specified tag
+    pull_policy: always                             # Ensure that the image is always pulled
+    container_name: portainer-${PORTAINER_TAG}      # Append Docker image tag to container name
+    restart: unless-stopped                         # Restart the container unless explicitly stopped
+    network_mode: bridge                            # Use the host network
+    hostname: portainer                             # Set the container hostname
 
     # Define the host and container ports
     ports:
@@ -37,6 +37,6 @@ services:
 
     # Mount host directories into the container
     volumes:
-      - ${HOST_DOCKER_PATH}/portainer/data:/data:rw  # Mount data directory
-      - /var/run/docker.sock:/var/run/docker.sock:rw # Allow container to talk to host Docker API
-      - /etc/localtime:/etc/localtime:ro             # Setup container with the proper timezone
+      - ${HOST_DOCKER_PATH}/portainer/data:/data:rw   # Mount data directory
+      - /var/run/docker.sock:/var/run/docker.sock:rw  # Allow container to talk to host Docker API
+      - /etc/localtime:/etc/localtime:ro              # Setup container with the proper timezone
