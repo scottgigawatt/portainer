@@ -12,7 +12,7 @@
 #
 # Docker Compose version on the target system
 #
-version: "2.9"
+version: "2.20"
 
 #
 # Define the services section
