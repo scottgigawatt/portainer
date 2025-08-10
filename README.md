@@ -10,6 +10,18 @@
   <img src="https://img.shields.io/github/repo-size/scottgigawatt/portainer?label=Storage%20Crate" alt="Repo Size" />
 </p>
 
+<p align="center">─── ⛧ ───</p>
+
+<p align="center">
+    <em>💀 Need fixes, features, or just to watch the code burn? Step into the fire and <strong>Enter 🔥HADES🔥</strong>.</em>
+</p>
+
+<p align="center">
+  <a href="https://discord.gg/BpEGzWwGYf">
+    <img src="https://img.shields.io/discord/1403601106315116626?label=%F0%9F%94%A5HADES%F0%9F%94%A5&logo=discord&logoColor=white&color=5865F2" alt="🔥HADES🔥 Discord" />
+  </a>
+</p>
+
 <hr />
 
 # 🚢 Portainer for Synology
