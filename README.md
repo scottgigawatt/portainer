@@ -56,7 +56,7 @@ Explore the full configuration in [`docker-compose.yml`](docker-compose.yml).
 All Docker config values are managed via the `.env` file. You can override any of them on-the-fly:
 
 ```bash
-PORTAINER_TAG="2.39.0" docker-compose up -d
+PORTAINER_TAG="lts" docker-compose up -d
 ```
 
 Tweak values to meet your deployment needs.
@@ -81,7 +81,6 @@ Tested on:
 - DSM 7.3
 - Docker Compose v2.20
 
-> [!NOTE]
 > 🛟 This setup should work on other platforms too—any port that runs Docker Compose can join the fleet.
 
 ## 📜 Charter Agreement
