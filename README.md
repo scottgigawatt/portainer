@@ -56,7 +56,7 @@ Explore the full configuration in [`docker-compose.yml`](docker-compose.yml).
 All Docker config values are managed via the `.env` file. You can override any of them on-the-fly:
 
 ```bash
-PORTAINER_TAG="lts" docker-compose up -d
+PORTAINER_TAG="sts" docker-compose up -d
 ```
 
 Tweak values to meet your deployment needs.
